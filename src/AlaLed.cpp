@@ -182,6 +182,7 @@ void AlaLed::setAnimationFunc(int animation)
         case ALA_SPARKLE:               animFunc = &AlaLed::sparkle;               break;
         case ALA_SPARKLE2:              animFunc = &AlaLed::sparkle2;              break;
         case ALA_STROBO:                animFunc = &AlaLed::strobo;                break;
+        case ALA_CURSOR:                animFunc = &AlaLed::cursor;                break;
 
         case ALA_PIXELSHIFTRIGHT:       animFunc = &AlaLed::pixelShiftRight;       break;
         case ALA_PIXELSHIFTLEFT:        animFunc = &AlaLed::pixelShiftLeft;        break;
@@ -280,6 +281,17 @@ void AlaLed::strobo()
     {
         leds[x] = (t==0)*maxOut;
     }
+}
+
+void AlaLed::cursor()
+{
+    int t = getStep(animStartTime, speed, ALA_CURSORDC);
+
+    Serial.println(t);
+    if( t == 0 ) {
+        leds[0] = maxOut - leds[0];
+    }
+
 }
 
 

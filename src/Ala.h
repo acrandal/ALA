@@ -41,6 +41,7 @@ along with The Arduino ALA library.  If not, see
 #define ALA_SPARKLE 105
 #define ALA_SPARKLE2 106
 #define ALA_STROBO 107
+#define ALA_CURSOR 108
 
 #define ALA_CYCLECOLORS 151
 
@@ -81,6 +82,9 @@ along with The Arduino ALA library.  If not, see
 
 // Strobo effect duty cycle (10=1/10)
 #define ALA_STROBODC 10
+
+// Cursor effect duty cycle (10=1/10)
+#define ALA_CURSORDC 10
 
 
 ////////////////////////////////////////////////////////////////////////////////
