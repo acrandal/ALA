@@ -125,6 +125,13 @@ void AlaLedRgb::setAnimation(int animation, long speed, AlaColor color, bool isS
     animStartTime = millis();
 }
 
+/**
+ *  Set the current Pelette on the fly
+ */
+void AlaLedRgb::setPalette( AlaPalette palette )
+{
+    this->palette = palette;
+}
 
 void AlaLedRgb::setAnimation(int animation, long speed, AlaPalette palette, bool isSeq)
 {
